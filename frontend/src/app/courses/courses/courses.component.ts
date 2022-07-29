@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 import { Course } from '../model/course';
-
-import { v4 as uuid } from 'uuid';
+import { CoursesService } from '../services/courses.service';
 
 @Component({
   selector: 'app-courses',
@@ -10,56 +10,12 @@ import { v4 as uuid } from 'uuid';
   styleUrls: ['./courses.component.scss'],
 })
 export class CoursesComponent implements OnInit {
-  courses: Course[] = [
-    {
-      _id: uuid(),
-      name: 'Curso de Angular 2+',
-      category: 'frontend',
-    },
-    {
-      _id: uuid(),
-      name: 'Curso de Angular 2+',
-      category: 'frontend',
-    },
-    {
-      _id: uuid(),
-      name: 'Curso de Angular 2+',
-      category: 'frontend',
-    },
-    {
-      _id: uuid(),
-      name: 'Curso de Angular 2+',
-      category: 'frontend',
-    },
-    {
-      _id: uuid(),
-      name: 'Curso de Angular 2+',
-      category: 'frontend',
-    },
-    {
-      _id: uuid(),
-      name: 'Curso de Angular 2+',
-      category: 'frontend',
-    },
-    {
-      _id: uuid(),
-      name: 'Curso de Angular 2+',
-      category: 'frontend',
-    },
-    {
-      _id: uuid(),
-      name: 'Curso de Angular 2+',
-      category: 'frontend',
-    },
-    {
-      _id: uuid(),
-      name: 'Curso de Angular 2+',
-      category: 'frontend',
-    },
-  ];
+  courses: Observable<Course[]>;
   displayedColumns = ['name', 'category'];
 
-  constructor() {}
+  constructor(private _courseService: CoursesService) {
+    this.courses = _courseService.getAllCourses();
+  }
 
   ngOnInit(): void {}
 }

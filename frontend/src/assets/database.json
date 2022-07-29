@@ -1,0 +1,47 @@
+[
+  {
+    "_id": "1",
+    "name": "Curso de Angular",
+    "category": "frontend"
+  },
+  {
+    "_id": "2",
+    "name": "Curso de Nodejs",
+    "category": "backend"
+  },
+  {
+    "_id": "3",
+    "name": "Curso de React.js",
+    "category": "frontend"
+  },
+  {
+    "_id": "4",
+    "name": "Curso de React Native",
+    "category": "mobile"
+  },
+  {
+    "_id": "5",
+    "name": "Curso de Flutte",
+    "category": "mobile"
+  },
+  {
+    "_id": "6",
+    "name": "Curso de Ruby o Rails",
+    "category": "fullstack"
+  },
+  {
+    "_id": "7",
+    "name": "Curso de Springoot",
+    "category": "backend"
+  },
+  {
+    "_id": "8",
+    "name": "Curso de PHP",
+   "category": "backend"
+  },
+  {
+    "_id": "9",
+    "name": "Curso de Laravel",
+    "category": "fullstack"
+  }
+]

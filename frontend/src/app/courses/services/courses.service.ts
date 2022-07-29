@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { v4 as uuid } from 'uuid';
+import { Injectable } from '@angular/core';
+import { delay, first, tap } from 'rxjs';
 
 import { Course } from '../model/course';
 
@@ -12,6 +12,10 @@ export class CoursesService {
   constructor(private _http: HttpClient) {}
 
   getAllCourses() {
-    return this._http.get<Course[]>(this.BASE_URL);
+    return this._http.get<Course[]>(this.BASE_URL).pipe(
+      first(),
+      delay(5000),
+      tap((courses) => console.log(courses))
+    );
   }
 }

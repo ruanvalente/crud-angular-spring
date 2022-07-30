@@ -1,0 +1,16 @@
+.dialog {
+  position: relative;
+
+  button {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+  }
+
+  @media (max-width: 768px) {
+    button {
+      position: inherit;
+      margin: 0 auto;
+    }
+  }
+}

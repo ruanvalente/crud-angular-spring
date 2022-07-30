@@ -8,7 +8,7 @@ import { Course } from '../model/course';
   providedIn: 'root',
 })
 export class CoursesService {
-  private readonly BASE_URL = '/assets/database.json';
+  private readonly BASE_URL = '/assets/adatabase.json';
   constructor(private _http: HttpClient) {}
 
   getAllCourses() {
